@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     // whenever the app is open it redirects to the home page
     @State var currentTab: Tab = .Home
+    @StateObject var manager = Manager()
     
     init() {
         UITabBar.appearance().isHidden = true
@@ -58,7 +59,7 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ContentView().environmentObject(Manager())
 }
 
 enum Tab: String, CaseIterable {
