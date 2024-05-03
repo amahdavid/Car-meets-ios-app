@@ -23,7 +23,11 @@ struct HomePageView: View {
                         
                         Spacer()
                         
-                        Image(systemName: "circle.grid.2x2.fill").foregroundColor(Color("kPrimary"))
+                        NavigationLink(destination:{
+                            PostedCarMeetsUIView()
+                        }, label: {
+                            Image(systemName: "circle.grid.2x2.fill").foregroundColor(Color("kPrimary"))
+                        })
                     }.padding()
                     
                     ScrollView(.horizontal, showsIndicators: false) {
