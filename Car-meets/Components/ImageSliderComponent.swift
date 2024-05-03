@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ImageSliderView: View {
+struct ImageSliderComponent: View {
     @State private var currentIndex = 0
     var imageSlides: [String] = ["cm1", "cm2", "cm3", "cm4", "cm5"]
     
@@ -38,5 +38,5 @@ struct ImageSliderView: View {
 }
 
 #Preview {
-    ImageSliderView()
+    ImageSliderComponent()
 }

@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct SearchView: View {
+struct SearchComponent: View {
     @State private var search: String = ""
     var body: some View {
         HStack{
             HStack{
                 Image(systemName: "magnifyingglass").padding(.leading)
                 
-                TextField("Search For Car Meets", text: $search).padding()
+                TextField("", text: $search).padding().foregroundColor(.black)
             }.background(Color("kSecondary")).cornerRadius(12)
             
             Image(systemName: "camera").padding().foregroundColor(.white).background(Color("kPrimary")).cornerRadius(12)
@@ -23,5 +23,5 @@ struct SearchView: View {
 }
 
 #Preview {
-    SearchView()
+    SearchComponent()
 }

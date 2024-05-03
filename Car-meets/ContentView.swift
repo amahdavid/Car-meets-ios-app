@@ -21,11 +21,23 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $currentTab) {
-            Text("Home View").frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity).background().tag(Tab.Home)
-            Text("Search View").frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity).tag(Tab.Search)
-            Text("Notifications View").frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity).tag(Tab.Notifications)
-            Text("Bookmark View").frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity).tag(Tab.Bookmark)
-            Text("Profile View").frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity).tag(Tab.Profile)
+            HomePageView()
+            
+            Text("Search View")
+                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)
+                .tag(Tab.Search)
+            
+            Text("Create View")
+                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)
+                .tag(Tab.Notifications)
+            
+            Text("Bookmark View")
+                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)
+                .tag(Tab.Create)
+            
+            Text("Profile View")
+                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)
+                .tag(Tab.Profile)
         }
         .overlay(HStack(spacing: 0){
             ForEach(Tab.allCases, id: \.rawValue){
@@ -46,7 +58,7 @@ struct ContentView: View {
             }
         }, label: {
             VStack(spacing: 0) {
-                Image(systemName: currentTab == tab ? tab.rawValue + ".fill": tab.rawValue).resizable().foregroundColor(Color("kPrimary")).aspectRatio(contentMode: .fit).frame(width: 25, height: 25).frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/).background(ZStack{
+                Image(systemName: currentTab == tab ? tab.rawValue + ".fill": tab.rawValue).resizable().foregroundColor(.black).aspectRatio(contentMode: .fit).frame(width: 25, height: 25).frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/).background(ZStack{
                     if currentTab == tab {
                         MaterialEffect(style: .light).clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/).matchedGeometryEffect(id: "Tab", in: animation)
                         
@@ -54,7 +66,7 @@ struct ContentView: View {
                     }
                 }).contentShape(Rectangle()).offset(y: currentTab == tab ? -15 : 0)
             }
-        })}.frame(height: 25)
+        })}.frame(height: 20)
     }
 }
 
@@ -65,8 +77,8 @@ struct ContentView: View {
 enum Tab: String, CaseIterable {
     case Home = "house"
     case Search = "magnifyingglass.circle"
+    case Create = "plus"
     case Notifications = "bell"
-    case Bookmark = "bookmark.circle"
     case Profile = "person"
     
     var TabName: String {
@@ -77,7 +89,7 @@ enum Tab: String, CaseIterable {
             return "Search"
         case .Notifications:
             return "Notifications"
-        case .Bookmark:
+        case .Create:
             return "Bookmark"
         case .Profile:
             return "Profile"
