@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    // whenever the app is open it redirects to the home page
     @State var currentTab: Tab = .Home
     @StateObject var manager = Manager()
     
@@ -16,12 +15,11 @@ struct ContentView: View {
         UITabBar.appearance().isHidden = true
     }
     
-    // used for matching geometrical effects
     @Namespace var animation
     
     var body: some View {
         TabView(selection: $currentTab) {
-            HomePageView()
+            HomePageView().tag(Tab.Home)
             
             Text("Search View")
                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)
@@ -29,15 +27,13 @@ struct ContentView: View {
             
             Text("Create View")
                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)
-                .tag(Tab.Notifications)
-            
-            Text("Bookmark View")
-                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)
                 .tag(Tab.Create)
             
-            Text("Profile View")
+            Text("Noti View")
                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)
-                .tag(Tab.Profile)
+                .tag(Tab.Notifications)
+            // adding ".tag(Tab.**Specific View**) worked
+            ProfileUIView(user: usersList[0]).tag(Tab.Profile)
         }
         .overlay(HStack(spacing: 0){
             ForEach(Tab.allCases, id: \.rawValue){
@@ -87,10 +83,10 @@ enum Tab: String, CaseIterable {
             return "Home"
         case .Search:
             return "Search"
+        case .Create:
+            return "Create"
         case .Notifications:
             return "Notifications"
-        case .Create:
-            return "Bookmark"
         case .Profile:
             return "Profile"
         }

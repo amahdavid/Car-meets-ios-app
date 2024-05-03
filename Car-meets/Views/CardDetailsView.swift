@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CardDetailsView: View {
-    var carMeet: CarMeetPostings
+    var carMeet: CarMeetsModel
     var body: some View {
         ScrollView {
             ZStack {

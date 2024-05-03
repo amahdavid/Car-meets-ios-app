@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BookmarkProductComponent: View {
     @EnvironmentObject var manager: Manager
-    var carMeet: CarMeetPostings
+    var carMeet: CarMeetsModel
     var body: some View {
         HStack(spacing: 20) {
             Image(carMeet.image).resizable().aspectRatio(contentMode: .fit).frame(width: 70).cornerRadius(9)

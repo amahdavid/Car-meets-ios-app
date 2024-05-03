@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CarMeetsCardComponent: View {
     @EnvironmentObject var manager: Manager
-    var carMeet: CarMeetPostings
+    var carMeet: CarMeetsModel
     var body: some View {
         ZStack {
             Color("kSecondary")

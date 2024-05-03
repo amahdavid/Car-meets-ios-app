@@ -8,13 +8,13 @@
 import Foundation
 
 class Manager: ObservableObject{
-    @Published private(set) var carMeets: [CarMeetPostings] = []
+    @Published private(set) var carMeets: [CarMeetsModel] = []
     
-    func saveToBookMarks(carMeet: CarMeetPostings) {
+    func saveToBookMarks(carMeet: CarMeetsModel) {
         carMeets.append(carMeet)
     }
     
-    func removeFromBookMarks(carMeet: CarMeetPostings) {
+    func removeFromBookMarks(carMeet: CarMeetsModel) {
         carMeets = carMeets.filter{ $0.id != carMeet.id }
     }
 

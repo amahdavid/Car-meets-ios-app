@@ -19,7 +19,8 @@
 		0216C9592BE597530049A6BB /* CreateUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0216C9582BE597530049A6BB /* CreateUIView.swift */; };
 		0216C95B2BE597720049A6BB /* ProfileUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0216C95A2BE597720049A6BB /* ProfileUIView.swift */; };
 		0216C95D2BE59A4C0049A6BB /* PostedCarMeetsUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0216C95C2BE59A4C0049A6BB /* PostedCarMeetsUIView.swift */; };
-		02F376AD2BE34FD70091F65A /* CarMeetPostings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F376AC2BE34FD70091F65A /* CarMeetPostings.swift */; };
+		0216C95F2BE59FF80049A6BB /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0216C95E2BE59FF80049A6BB /* UserModel.swift */; };
+		02F376AD2BE34FD70091F65A /* CarMeetsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F376AC2BE34FD70091F65A /* CarMeetsModel.swift */; };
 		02F376B22BE355BB0091F65A /* ImageSliderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F376B12BE355BB0091F65A /* ImageSliderComponent.swift */; };
 		02F964612BE0B53400DB9370 /* Car_meetsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F964602BE0B53400DB9370 /* Car_meetsApp.swift */; };
 		02F964632BE0B53400DB9370 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F964622BE0B53400DB9370 /* ContentView.swift */; };
@@ -60,7 +61,8 @@
 		0216C9582BE597530049A6BB /* CreateUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUIView.swift; sourceTree = "<group>"; };
 		0216C95A2BE597720049A6BB /* ProfileUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUIView.swift; sourceTree = "<group>"; };
 		0216C95C2BE59A4C0049A6BB /* PostedCarMeetsUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostedCarMeetsUIView.swift; sourceTree = "<group>"; };
-		02F376AC2BE34FD70091F65A /* CarMeetPostings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMeetPostings.swift; sourceTree = "<group>"; };
+		0216C95E2BE59FF80049A6BB /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		02F376AC2BE34FD70091F65A /* CarMeetsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMeetsModel.swift; sourceTree = "<group>"; };
 		02F376B12BE355BB0091F65A /* ImageSliderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSliderComponent.swift; sourceTree = "<group>"; };
 		02F9645D2BE0B53400DB9370 /* Car-meets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Car-meets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02F964602BE0B53400DB9370 /* Car_meetsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car_meetsApp.swift; sourceTree = "<group>"; };
@@ -116,7 +118,8 @@
 		02F376AB2BE34FA50091F65A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				02F376AC2BE34FD70091F65A /* CarMeetPostings.swift */,
+				02F376AC2BE34FD70091F65A /* CarMeetsModel.swift */,
+				0216C95E2BE59FF80049A6BB /* UserModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				02F376B22BE355BB0091F65A /* ImageSliderComponent.swift in Sources */,
 				021618872BE35CC90013CC7A /* CarMeetsCardComponent.swift in Sources */,
 				021618922BE580690013CC7A /* BookmarkProductComponent.swift in Sources */,
+				0216C95F2BE59FF80049A6BB /* UserModel.swift in Sources */,
 				02F964612BE0B53400DB9370 /* Car_meetsApp.swift in Sources */,
 				0216188B2BE35E590013CC7A /* Manager.swift in Sources */,
 				021618962BE58A570013CC7A /* CardDetailsView.swift in Sources */,
@@ -338,7 +342,7 @@
 				021618892BE35CEC0013CC7A /* SearchComponent.swift in Sources */,
 				021618942BE582CE0013CC7A /* BookmarkedUIView.swift in Sources */,
 				021618902BE573C80013CC7A /* HomePageView.swift in Sources */,
-				02F376AD2BE34FD70091F65A /* CarMeetPostings.swift in Sources */,
+				02F376AD2BE34FD70091F65A /* CarMeetsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
