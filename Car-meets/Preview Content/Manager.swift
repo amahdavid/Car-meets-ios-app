@@ -9,6 +9,7 @@ import Foundation
 
 class Manager: ObservableObject{
     @Published private(set) var carMeets: [CarMeetsModel] = []
+    @Published private(set) var notifications: [NotificationModel] = []
     
     func saveToBookMarks(carMeet: CarMeetsModel) {
         carMeets.append(carMeet)

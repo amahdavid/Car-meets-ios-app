@@ -32,7 +32,7 @@ struct ContentView: View {
             }
             .padding(.vertical)
             .padding(.bottom, getSafeArea().bottom == 0 ? 5 : (getSafeArea().bottom - 15))
-            .background(Color("kSecondary"))
+            .background(Color("kPrimary"))
         },
                  alignment: .bottom
         ).ignoresSafeArea(.all, edges: .bottom)
@@ -64,7 +64,7 @@ struct ContentView: View {
 enum Tab: String, CaseIterable {
     case Home = "house"
     case Search = "magnifyingglass.circle"
-    case Create = "plus"
+    case Create = "plus.circle"
     case Notifications = "bell"
     case Profile = "person"
     

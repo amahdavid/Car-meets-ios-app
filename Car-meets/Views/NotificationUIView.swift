@@ -12,7 +12,15 @@ struct NotificationUIView: View {
 
     var body: some View {
         NavigationStack {
-            Text("Notification UI View")
+            ScrollView {
+                VStack(spacing: 5)
+                    {
+                        ForEach(notificationsList) { notification in
+                                NotificationComponent(notifications:notification)
+                            }
+                    }
+                    .padding()
+            }
         }.environmentObject(manager)
     }
 }

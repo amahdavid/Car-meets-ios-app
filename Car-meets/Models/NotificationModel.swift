@@ -6,3 +6,19 @@
 //
 
 import Foundation
+
+
+struct NotificationModel : Identifiable {
+    var id = UUID()
+    var notificationText: String = ""
+    var image: String = ""
+}
+
+var notificationsList = [
+    NotificationModel(notificationText: "New car meet posted!", image: "cm1"),
+    NotificationModel(notificationText: "New car meet posted!", image: "cm1"),
+    NotificationModel(notificationText: "New car meet posted!", image: "cm1"),
+    NotificationModel(notificationText: "New car meet posted!", image: "cm1"),
+    NotificationModel(notificationText: "New car meet posted!", image: "cm1"),
+    NotificationModel(notificationText: "New car meet posted!", image: "cm1")
+]
