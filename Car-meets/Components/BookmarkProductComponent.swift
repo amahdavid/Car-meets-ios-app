@@ -10,6 +10,14 @@ import SwiftUI
 struct BookmarkProductComponent: View {
     @EnvironmentObject var manager: Manager
     var carMeet: CarMeetsModel
+    
+    private let dateFormatter: DateFormatter = {
+            let formatter = DateFormatter()
+            formatter.dateStyle = .medium
+            formatter.timeStyle = .short
+            return formatter
+        }()
+
     var body: some View {
         HStack(spacing: 20) {
             Image(carMeet.image).resizable().aspectRatio(contentMode: .fit).frame(width: 70).cornerRadius(9)
@@ -17,8 +25,8 @@ struct BookmarkProductComponent: View {
             VStack(alignment: .leading, spacing: 5) {
                 Text(carMeet.title).bold()
                 
-                Text(carMeet.date).bold()
-
+                Text(dateFormatter.string(from: carMeet.date))
+                                    .bold()
             }.padding()
             
             Spacer()

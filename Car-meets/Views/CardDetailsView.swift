@@ -9,6 +9,13 @@ import SwiftUI
 
 struct CardDetailsView: View {
     var carMeet: CarMeetsModel
+    private let dateFormatter: DateFormatter = {
+            let formatter = DateFormatter()
+            formatter.dateStyle = .medium
+            formatter.timeStyle = .short
+            return formatter
+        }()
+    
     var body: some View {
         ScrollView {
             ZStack {
@@ -35,7 +42,7 @@ struct CardDetailsView: View {
                             
                             Spacer()
                             
-                            Text(carMeet.date)
+                            Text(dateFormatter.string(from: carMeet.date))
                                 .font(.title2)
                                 .fontWeight(.semibold)
                                 .padding(.horizontal)
