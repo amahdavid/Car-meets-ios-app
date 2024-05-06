@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct CreateUIView: View {
+    @EnvironmentObject var manager: Manager
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            Text("Create UI View")
+        }.environmentObject(manager)
     }
 }
 
 #Preview {
-    CreateUIView()
+    CreateUIView().environmentObject(Manager())
 }

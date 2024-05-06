@@ -9,10 +9,11 @@ import SwiftUI
 
 struct HomePageView: View {
     @EnvironmentObject var manager: Manager
+    
     var body: some View {
         NavigationStack {
             ZStack(alignment: .top) {
-                Color.white.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                Color.white.edgesIgnoringSafeArea(.all)
                 
                 VStack {
                     AppBar()
@@ -23,29 +24,27 @@ struct HomePageView: View {
                         
                         Spacer()
                         
-                        NavigationLink(destination:{
-                            PostedCarMeetsUIView()
-                        }, label: {
+                        NavigationLink(destination: PostedCarMeetsUIView()) {
                             Image(systemName: "circle.grid.2x2.fill").foregroundColor(Color("kPrimary"))
-                        })
+                        }
                     }.padding()
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 10) {
-                            ForEach(carMeetList, id: \.id) {
-                                carMeet in NavigationLink{
-                                    Text(carMeet.title)
-                                } label: {
-                                    CarMeetsCardComponent(carMeet: carMeet).environmentObject(manager)
+                            ForEach(carMeetList, id: \.id) { carMeet in
+                                NavigationLink(destination: Text(carMeet.title)) {
+                                    CarMeetsCardComponent(carMeet: carMeet)
                                 }
                             }
                         }
                     }.padding(.horizontal)
                 }
             }
-        }.environmentObject(manager)
+        }
+        .environmentObject(manager) // Inject Manager into the whole view
     }
 }
+
 
 #Preview {
     HomePageView().environmentObject(Manager())
@@ -63,12 +62,12 @@ struct AppBar: View {
                     
                     Spacer()
                     
-                    NavigationLink(destination: BookmarkedUIView().environmentObject(manager)) {
+                    NavigationLink(destination: BookmarkedUIView()) {
                         BookmarkButtonComponent(numOfBookmarkedProducts: manager.carMeets.count)
                     }
                 }
                 Text("Find Car meets ...").font(.largeTitle .bold())
             }
-        }.padding().environmentObject(Manager())
+        }.padding()
     }
 }

@@ -14,7 +14,7 @@ struct SearchComponent: View {
             HStack{
                 Image(systemName: "magnifyingglass").padding(.leading)
                 
-                TextField("", text: $search).padding().foregroundColor(.black)
+                TextField("Search for car meets", text: $search).padding().foregroundColor(.black)
             }.background(Color("kSecondary")).cornerRadius(12)
             
             Image(systemName: "camera").padding().foregroundColor(.white).background(Color("kPrimary")).cornerRadius(12)

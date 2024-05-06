@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct Car_meetsApp: App {
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AuthUIView()
         }
     }
 }

@@ -20,9 +20,13 @@
 		0216C95B2BE597720049A6BB /* ProfileUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0216C95A2BE597720049A6BB /* ProfileUIView.swift */; };
 		0216C95D2BE59A4C0049A6BB /* PostedCarMeetsUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0216C95C2BE59A4C0049A6BB /* PostedCarMeetsUIView.swift */; };
 		0216C95F2BE59FF80049A6BB /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0216C95E2BE59FF80049A6BB /* UserModel.swift */; };
-		0216C9612BE6E3CB0049A6BB /* SignInUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0216C9602BE6E3CB0049A6BB /* SignInUIView.swift */; };
+		0216C9612BE6E3CB0049A6BB /* SignUpUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0216C9602BE6E3CB0049A6BB /* SignUpUIView.swift */; };
 		0216C9642BE6E81B0049A6BB /* LoginUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0216C9632BE6E81B0049A6BB /* LoginUIView.swift */; };
 		0216C9672BE6ED190049A6BB /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0216C9662BE6ED190049A6BB /* Validation.swift */; };
+		0216C9692BE725360049A6BB /* AuthUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0216C9682BE725360049A6BB /* AuthUIView.swift */; };
+		0216C96B2BE95F2A0049A6BB /* NotificationUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0216C96A2BE95F2A0049A6BB /* NotificationUIView.swift */; };
+		0216C96F2BE96C140049A6BB /* NotificationComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0216C96E2BE96C130049A6BB /* NotificationComponent.swift */; };
+		0216C9712BE96C3F0049A6BB /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0216C9702BE96C3F0049A6BB /* NotificationModel.swift */; };
 		02F376AD2BE34FD70091F65A /* CarMeetsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F376AC2BE34FD70091F65A /* CarMeetsModel.swift */; };
 		02F376B22BE355BB0091F65A /* ImageSliderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F376B12BE355BB0091F65A /* ImageSliderComponent.swift */; };
 		02F964612BE0B53400DB9370 /* Car_meetsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F964602BE0B53400DB9370 /* Car_meetsApp.swift */; };
@@ -65,9 +69,13 @@
 		0216C95A2BE597720049A6BB /* ProfileUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUIView.swift; sourceTree = "<group>"; };
 		0216C95C2BE59A4C0049A6BB /* PostedCarMeetsUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostedCarMeetsUIView.swift; sourceTree = "<group>"; };
 		0216C95E2BE59FF80049A6BB /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		0216C9602BE6E3CB0049A6BB /* SignInUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUIView.swift; sourceTree = "<group>"; };
+		0216C9602BE6E3CB0049A6BB /* SignUpUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpUIView.swift; sourceTree = "<group>"; };
 		0216C9632BE6E81B0049A6BB /* LoginUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUIView.swift; sourceTree = "<group>"; };
 		0216C9662BE6ED190049A6BB /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		0216C9682BE725360049A6BB /* AuthUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUIView.swift; sourceTree = "<group>"; };
+		0216C96A2BE95F2A0049A6BB /* NotificationUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationUIView.swift; sourceTree = "<group>"; };
+		0216C96E2BE96C130049A6BB /* NotificationComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationComponent.swift; sourceTree = "<group>"; };
+		0216C9702BE96C3F0049A6BB /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		02F376AC2BE34FD70091F65A /* CarMeetsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMeetsModel.swift; sourceTree = "<group>"; };
 		02F376B12BE355BB0091F65A /* ImageSliderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSliderComponent.swift; sourceTree = "<group>"; };
 		02F9645D2BE0B53400DB9370 /* Car-meets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Car-meets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,8 +125,10 @@
 				0216C9582BE597530049A6BB /* CreateUIView.swift */,
 				0216C95A2BE597720049A6BB /* ProfileUIView.swift */,
 				0216C95C2BE59A4C0049A6BB /* PostedCarMeetsUIView.swift */,
-				0216C9602BE6E3CB0049A6BB /* SignInUIView.swift */,
+				0216C9602BE6E3CB0049A6BB /* SignUpUIView.swift */,
 				0216C9632BE6E81B0049A6BB /* LoginUIView.swift */,
+				0216C9682BE725360049A6BB /* AuthUIView.swift */,
+				0216C96A2BE95F2A0049A6BB /* NotificationUIView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -136,6 +146,7 @@
 			children = (
 				02F376AC2BE34FD70091F65A /* CarMeetsModel.swift */,
 				0216C95E2BE59FF80049A6BB /* UserModel.swift */,
+				0216C9702BE96C3F0049A6BB /* NotificationModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -148,6 +159,7 @@
 				021618882BE35CEC0013CC7A /* SearchComponent.swift */,
 				0216188C2BE572A70013CC7A /* BookmarkButtonComponent.swift */,
 				021618912BE580690013CC7A /* BookmarkProductComponent.swift */,
+				0216C96E2BE96C130049A6BB /* NotificationComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -353,15 +365,19 @@
 				021618922BE580690013CC7A /* BookmarkProductComponent.swift in Sources */,
 				0216C95F2BE59FF80049A6BB /* UserModel.swift in Sources */,
 				02F964612BE0B53400DB9370 /* Car_meetsApp.swift in Sources */,
-				0216C9612BE6E3CB0049A6BB /* SignInUIView.swift in Sources */,
+				0216C9612BE6E3CB0049A6BB /* SignUpUIView.swift in Sources */,
 				0216188B2BE35E590013CC7A /* Manager.swift in Sources */,
 				021618962BE58A570013CC7A /* CardDetailsView.swift in Sources */,
 				0216C95B2BE597720049A6BB /* ProfileUIView.swift in Sources */,
 				021618892BE35CEC0013CC7A /* SearchComponent.swift in Sources */,
+				0216C96B2BE95F2A0049A6BB /* NotificationUIView.swift in Sources */,
 				021618942BE582CE0013CC7A /* BookmarkedUIView.swift in Sources */,
 				0216C9642BE6E81B0049A6BB /* LoginUIView.swift in Sources */,
+				0216C9712BE96C3F0049A6BB /* NotificationModel.swift in Sources */,
 				021618902BE573C80013CC7A /* HomePageView.swift in Sources */,
 				0216C9672BE6ED190049A6BB /* Validation.swift in Sources */,
+				0216C96F2BE96C140049A6BB /* NotificationComponent.swift in Sources */,
+				0216C9692BE725360049A6BB /* AuthUIView.swift in Sources */,
 				02F376AD2BE34FD70091F65A /* CarMeetsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct SearchUIView: View {
+    @EnvironmentObject var manager: Manager
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            Text("Search UI View")
+        }.environmentObject(manager)
     }
 }
 
 #Preview {
-    SearchUIView()
+    SearchUIView().environmentObject(Manager())
 }

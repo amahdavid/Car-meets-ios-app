@@ -18,21 +18,12 @@ struct ContentView: View {
     @Namespace var animation
     
     var body: some View {
+        
         TabView(selection: $currentTab) {
             HomePageView().tag(Tab.Home)
-            
-            Text("Search View")
-                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)
-                .tag(Tab.Search)
-            
-            Text("Create View")
-                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)
-                .tag(Tab.Create)
-            
-            Text("Noti View")
-                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)
-                .tag(Tab.Notifications)
-            // adding ".tag(Tab.**Specific View**) worked
+            SearchUIView().tag(Tab.Search)
+            CreateUIView().tag(Tab.Create)
+            NotificationUIView().tag(Tab.Notifications)
             ProfileUIView(user: usersList[0]).tag(Tab.Profile)
         }
         .overlay(HStack(spacing: 0){

@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct LoginUIView: View {
+    @Binding var currentShowingView: String
+    @Binding var isAuthenticated: Bool
+
+    @State private var currentView: String = "login"
+    
     @State private var user = User()
     @State private var showPassword = false
 
@@ -71,7 +76,11 @@ struct LoginUIView: View {
                         .padding(.horizontal)
                 }
                 
-                Button(action: {}) {
+                Button(action: {
+                    withAnimation {
+                        self.currentShowingView = "signup"
+                    }
+                }) {
                     Text("Don't have an account? Sign Up").foregroundColor(.blue)
                 }
                 
@@ -79,15 +88,16 @@ struct LoginUIView: View {
                 Spacer()
                 
                 Button {
-                    
+                    // add login logic here
+                    print("Email: \(user.email)")
+                    print("Password: \(user.password)")
+                     
+                    isAuthenticated = true
                 } label: {
-                    Text("Sign in").foregroundColor(.blue)
+                    Text("Log in").foregroundColor(.blue)
                         .font(.title3).bold().frame(maxWidth: .infinity).padding().background(RoundedRectangle(cornerRadius: 10).fill(Color("kSecondary"))).padding(.horizontal)
                 }
             }
         }
     }
-}
-#Preview {
-    LoginUIView()
 }

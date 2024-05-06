@@ -7,9 +7,12 @@
 
 import SwiftUI
 
-struct SignInUIView: View {
+struct SignUpUIView: View {
+    @Binding var currentShowingView: String
+    @Binding var isAuthenticated: Bool
+
     @State private var user = User()
-        @State private var showPassword = false
+    @State private var showPassword = false
 
         var body: some View {
             ZStack {
@@ -17,7 +20,7 @@ struct SignInUIView: View {
                 
                 VStack {
                     HStack {
-                        Text("Hi There, Welcome!").font(.largeTitle).bold().foregroundColor(.white)
+                        Text("Hi There, Welcome!").font(.largeTitle).bold().foregroundColor(.black)
                         Spacer()
                     }.padding().padding(.top)
                     
@@ -126,7 +129,11 @@ struct SignInUIView: View {
                             .padding(.horizontal)
                     }
                     
-                    Button(action: {}) {
+                    Button(action: {
+                        withAnimation {
+                            self.currentShowingView = "login"
+                        }
+                    }) {
                         Text("Already have an account? Log in").foregroundColor(.blue)
                     }
                     
@@ -134,6 +141,13 @@ struct SignInUIView: View {
                     Spacer()
                     
                     Button {
+                       // add sign up logic here
+                        print("First Name: \(user.firstName)")
+                            print("Last Name: \(user.lastName)")
+                            print("Location: \(user.location)")
+                            print("Email: \(user.email)")
+                        
+                       isAuthenticated = true
                         
                     } label: {
                         Text("Sign up").foregroundColor(.blue)
@@ -143,8 +157,3 @@ struct SignInUIView: View {
             }
         }
 }
-
-#Preview {
-    SignInUIView()
-}
-
