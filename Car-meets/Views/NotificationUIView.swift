@@ -13,7 +13,7 @@ struct NotificationUIView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                VStack(spacing: 5)
+                VStack(spacing: 2)
                     {
                         ForEach(notificationsList) { notification in
                                 NotificationComponent(notifications:notification)

@@ -41,7 +41,7 @@ struct HomePageView: View {
                 }
             }
         }
-        .environmentObject(manager) // Inject Manager into the whole view
+        .environmentObject(manager)
     }
 }
 

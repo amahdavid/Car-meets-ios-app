@@ -10,8 +10,15 @@ import SwiftUI
 struct SearchUIView: View {
     @EnvironmentObject var manager: Manager
     var body: some View {
-        NavigationStack {
-            Text("Search UI View")
+        VStack {
+            SearchComponent().padding(.horizontal)
+            Spacer()
+            ScrollView {
+                
+                ForEach(carMeetList, id: \.id) {
+                    carMeet in BookmarkProductComponent(carMeet: carMeet)
+                }
+            }
         }.environmentObject(manager)
     }
 }

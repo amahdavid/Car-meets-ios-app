@@ -16,8 +16,6 @@ struct SearchComponent: View {
                 
                 TextField("Search for car meets", text: $search).padding().foregroundColor(.black)
             }.background(Color("kSecondary")).cornerRadius(12)
-            
-            Image(systemName: "camera").padding().foregroundColor(.white).background(Color("kPrimary")).cornerRadius(12)
         }.padding(.horizontal)
     }
 }
