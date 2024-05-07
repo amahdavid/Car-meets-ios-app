@@ -32,7 +32,7 @@ struct HomePageView: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 10) {
                             ForEach(carMeetList, id: \.id) { carMeet in
-                                NavigationLink(destination: Text(carMeet.title)) {
+                                NavigationLink(destination: CardDetailsView(carMeet: carMeet)) {
                                     CarMeetsCardComponent(carMeet: carMeet)
                                 }
                             }
